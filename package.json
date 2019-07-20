@@ -1,0 +1,11 @@
+{
+  "name": "resty_swp",
+  "version": "1.0.0",
+  "description": "restify apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pepe Valdivia <jvaldivia@softweb.pe>",
+  "license": "ISC"
+}
