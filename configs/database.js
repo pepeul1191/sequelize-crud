@@ -8,7 +8,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 		min: 0,
 		idle: 10000
 	},
-	storage: 'db/db_accesos.db',
+	storage: 'db/demo.db',
 	define: {
 		timestamps: false // true by default
 	}
