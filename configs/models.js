@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-var database = require('.database');
+var database = require('./database');
 
 var db = database.db;
 
