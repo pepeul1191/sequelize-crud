@@ -1,11 +1,15 @@
 {
-  "name": "resty_swp",
+  "name": "sequelize_swp",
   "version": "1.0.0",
-  "description": "restify apis",
+  "description": "sequelize",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pepe Valdivia <jvaldivia@softweb.pe>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "^5.10.1",
+    "sqlite3": "^4.0.9"
+  }
 }

@@ -8,10 +8,10 @@ Arrancar modo de desarrollo la aplicación web:
 
     $ npm run start:dev
 
-
 ---
 
 Fuentes:
 
-+ http://restify.com/docs/home/
++ http://docs.sequelizejs.com/manual/getting-started
 + https://github.com/pepeul1191/koa-js-boilerplate
++ https://github.com/pepeul1191/Express-JS-pp
