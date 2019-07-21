@@ -33,6 +33,20 @@ async function editar(id, name, code){
       where: {
         id: id  
       }
+    });
+  }catch(error){
+    console.log(error);
+  }
+  console.log(JSON.stringify(student));
+}
+
+async function eliminar(id){
+  var student;
+  try{
+    student = await models.Student.destroy({
+      where: {
+        id: id  
+      }
     });  
   }catch(error){
     console.log(error);
@@ -42,4 +56,5 @@ async function editar(id, name, code){
 
 // listar();
 // crear('Carlos', 'l21j312');
-editar(4, 'Carlitos', '12345');
+// editar(4, 'Carlitos', '12345');
+eliminar(4);
