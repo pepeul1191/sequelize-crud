@@ -1,7 +1,7 @@
 {
   "name": "sequelize_swp",
   "version": "1.0.0",
-  "description": "sequelize",
+  "description": "sequelize aprendiendo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -13,7 +13,7 @@ async function listar(){
 async function crear(name, code){
   var new_student;
   try{
-    new_student= await models.Student.create({
+    new_student = await models.Student.create({
       name: name,
       code: code,
     });  
@@ -23,5 +23,23 @@ async function crear(name, code){
   console.log(JSON.stringify(new_student));
 }
 
-listar();
+async function editar(id, name, code){
+  var student;
+  try{
+    student = await models.Student.update({
+      name: name,
+      code: code,
+    }, {
+      where: {
+        id: id  
+      }
+    });  
+  }catch(error){
+    console.log(error);
+  }
+  console.log(JSON.stringify(student));
+}
+
+// listar();
 // crear('Carlos', 'l21j312');
+editar(4, 'Carlitos', '12345');
