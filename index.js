@@ -54,7 +54,49 @@ async function eliminar(id){
   console.log(JSON.stringify(student));
 }
 
+async function transaccion(){
+  var data = [
+    {
+      name: 'Javier',
+      code: '123123',
+    },
+    {
+      name: 'Mariano',
+      code: '982312',
+    },
+    {
+      name: 'Leonel',
+      code: '809384',
+    },
+    {
+      name: 'Carlos',
+      code: null,
+    },
+  ];
+  var tx;
+  var ids = [];
+  try {
+    tx = await models.db.transaction();
+    for(var i = 0; i < data.length; i++){
+      var new_student = await models.Student.create({
+        name: data[i].name,
+        code: data[i].code,
+      },{
+        transaction: tx
+      });
+      console.log(JSON.stringify(new_student));
+      ids.push(new_student.id);
+    } 
+    await tx.commit();
+  } catch (err) {
+    console.log(err);
+    await tx.rollback();
+  }
+  console.log(ids);
+}
+
 // listar();
 // crear('Carlos', 'l21j312');
 // editar(4, 'Carlitos', '12345');
-eliminar(4);
+// eliminar(4);
+transaccion();
